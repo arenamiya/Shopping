@@ -1,0 +1,11 @@
+
+<div class="fashion-item" id="saved-item-<%= @item.id %>">
+        <a href="/collections/<%= @item.id %>">
+        <img src="<%= @item.photo %>" width="50%"><br>
+        <div class="fashion-name"><%= @item.name %></div>
+        </a>
+        $<%= @item.price %><br>
+         <div onClick="topBanner(<%= @item.id %>)">  
+                <%= link_to "Save Item", new_item_home_index_path, remote: true %>
+        </div>
+</div>

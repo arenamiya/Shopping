@@ -1,0 +1,23 @@
+<% content_for :title, "Saved Items" %>
+
+<div class="fashion-grid">
+
+<% @saved.each do |collection| %>
+
+<!-- add this to div to remove item from saved list:
+onClick="savedList(<%= collection.id %>) 
+-->
+
+  <div class="fashion-item" id="saved-item-<%= collection.id %>">
+    <a href="/collections/<%= collection.id %>">
+      <img src="<%= collection.photo %>" height="250px"><br>
+      <div class="fashion-name"><%= collection.name %></div>
+    </a>
+    $<%= collection.price %><br>
+    <a onClick="savedList(<%= collection.id %>)">Remove Item</a>
+  </div>
+
+<% end %>
+
+</div>
+

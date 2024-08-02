@@ -1,0 +1,8 @@
+<h1>Editing Subscription</h1>
+
+<%= render 'form', subscription: @subscription %>
+
+<%= link_to 'Show', @subscription %> |
+<%= link_to 'Destroy', @subscription, method: :destroy, data: { confirm: 'Are you sure?' } %> |
+
+<%= link_to 'Back', subscriptions_path %>

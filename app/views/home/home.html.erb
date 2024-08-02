@@ -1,0 +1,28 @@
+<% content_for :title, "Home" %>
+
+<div id="top-banner">
+    <%= render partial: 'banner', item: @item %>
+</div>
+
+<hr>
+
+<br>
+<h1>Collections</h1>
+<h1 style="font-size:18px; text-align: left; margin-left: 16px;"><a href="/collections">see all +</a></h1>
+<div class="collections-grid">
+
+    <div class="a-collection"><a href="/collections?category=Mens"><img src="" height="200px">men.</a></div>
+    <div class="a-collection"><a href="/collections?category=Womens"><img src="" height="200px">women.</a></div>
+    <div class="a-collection"><a href="/collections?category=Kids"><img src="" height="200px">kids.</a></div>
+    <div class="a-collection"><a href="/collections?stockdate=<%= Date.current %>"><img src="" height="200px">new additions.</a></div>
+
+</div>
+
+<br><br>
+
+<h1>Newsletter</h1>
+<h1 style="font-size:20px">Signup with our newsletter!</h1>
+
+<%= render "subscriptions/form", subscription: @subscription %>
+
+<br><br><br><br><br>

@@ -1,0 +1,14 @@
+<h1>Edit Product</h1>
+
+
+<div class="fashion-item" id="saved-item-<%= @product.id %>">
+      <a href="/collections/<%= @product.id %>">
+        <img src="<%= @product.photo %>" height="250px"><br>
+        <div class="fashion-name"><%= @product.name %></div>
+      </a>
+        Size: <%= @cart.size %>, Color: <%= @cart.color %>, Quantity: <%= @cart.quantity %><br>
+      $<%= @product.price %> x <%= @cart.quantity %>
+      = $<%= @product.price * @cart.quantity %><br>
+</div>
+
+<%= render 'form', cart: @cart %>

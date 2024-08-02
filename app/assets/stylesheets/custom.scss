@@ -1,0 +1,138 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.head-text {
+    text-align: center;
+}
+.center {
+    text-align: center;
+}
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+    margin-top: 20px;
+    text-align: center;
+}
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+#logo {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -1px;
+    float: left;
+    margin-right: 10px;
+    padding-top: 9px;
+    font-size: 2.2em;
+    color: #fff;
+}
+
+// Button
+
+.btn-grad {background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)}
+.btn-grad {
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+// Break
+hr.grad {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+hr {
+    height: 2px;
+    background-color: rgb(175, 175, 175);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+// Signup
+input, textarea, select, .uneditable-input {
+    border: 2px solid #7FB8EA;
+    width: 100%;
+    margin-bottom: 20px;
+    @include box_sizing(border_box);
+}
+input {
+    height: auto !important;
+}
+#error_explanation {
+    color: crimson;
+ul {
+    color: crimson;
+    margin: 0 0 20px 0;
+    }
+}
+.field_with_errors {
+    @extend .has-error;
+    .form-control {
+    color: $state-danger-text;
+    }
+}
+.checkbox {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    span {
+        margin-left: 20px;
+        font-weight: normal;
+    }
+}
+#session_remember_me {
+    width: auto;
+    margin-left: 0;
+}
+
+// Gravatar circular
+.img-circular{
+    border-radius: 50%;
+}
+
+// Footer
+.footer {
+    background-color: rgb(245, 245, 245);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    border-top: 3px solid #9e959e;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// No padding
+.row-no-padding {
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

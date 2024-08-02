@@ -1,0 +1,8 @@
+{
+  "name": "RAD2021_s3728738_s3808127",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "bootstrap-sass": "^3.4.1"
+  }
+}

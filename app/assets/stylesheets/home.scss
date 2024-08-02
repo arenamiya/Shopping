@@ -1,0 +1,17 @@
+.collections-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 5px; }
+
+.a-collection {
+  font-size: 16px;
+  background: white;
+  margin: 10px 10px;
+  padding: 15px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05); }
+  .a-collection a {
+    font-size: 18px;
+    color: black; }
+
+/*# sourceMappingURL=home.css.map */

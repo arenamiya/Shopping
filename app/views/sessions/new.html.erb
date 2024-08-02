@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+            p {text-align: center;}
+        </style>
+    </head>
+<body>
+
+<% provide(:title, "Log in") %>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= notice %><br>
+
+        <%= form_for(:session, url: login_path) do |f| %>
+        
+            <%= f.email_field :email, class: 'form-control', placeholder: "Email"%>
+            <%= f.password_field :password, class: 'form-control', placeholder: "Password"%>
+            
+            <%= f.submit "Log in", class: "btn btn-grad" %>
+            
+        <% end %>
+        <p>New to us? <%= link_to "Sign up", signup_path %></p>
+        
+    </div>
+</div>

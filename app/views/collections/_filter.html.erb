@@ -1,0 +1,33 @@
+
+<div id="filter-divination">
+    <div id="filter-hidden" style="display:none;">
+        <h2>Collections</h2>
+            <a href="/collections">All</a> | 
+            <a href="/collections?category=Mens">Men</a> | 
+            <a href="/collections?category=Womens">Women</a> | 
+            <a href="/collections?category=Kids">Kids</a> |
+            <a href="/collections?stockdate=<%= Date.current %>">New Arrivals</a>
+        <hr>
+        <h2>Colors</h2>
+            <a href="/collections?color=Red">Red</a> | 
+            <a href="/collections?color=Orange">Orange</a> | 
+            <a href="/collections?color=Yellow">Yellow</a> | 
+            <a href="/collections?color=Green">Green</a> | 
+            <a href="/collections?color=Blue">Blue</a> | 
+            <a href="/collections?color=Purple">Purple</a> | 
+            <a href="/collections?color=Pink">Pink</a> | 
+            <a href="/collections?color=White">White</a> | 
+            <a href="/collections?color=Grey">Grey</a> | 
+            <a href="/collections?color=Black">Black</a>
+        <hr>
+        <h2>Sizes</h2>
+            <a href="/collections?size=XS">XS</a> | 
+            <a href="/collections?size=S">S</a> | 
+            <a href="/collections?size=M">M</a> | 
+            <a href="/collections?size=L">L</a> | 
+            <a href="/collections?size=XL">XL</a>
+        <input type="submit" class="btn btn-grad" value="Save Filters">
+
+    </div>
+<input type="submit" class="btn btn-grad" id="filter-button-open" value="Open Filters" onclick="openFilters()">
+</div>

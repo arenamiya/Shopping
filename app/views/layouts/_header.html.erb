@@ -1,0 +1,50 @@
+
+<section id="header-section">
+
+<nav id="sidenav" class="sidenav">
+
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+  
+  <a href="/">Home</a>
+
+  <br><br><br>
+
+  <p style="font-size:18px; margin-left: 22px">shop</p>
+  
+  <!--<a href="/collections">All</a>-->
+  <a href="/collections?category=Mens">Men</a>
+  <a href="/collections?category=Womens">Women</a>
+  <a href="/collections?category=Kids">Kids</a>
+  <a href="/collections?stockdate=<%= Date.current %>">New-ins</a>
+
+  <hr class= ".grad">
+   
+  <a href="/saved">Saved</a><br><br><br>
+
+  <a style="font-size:20px">help &<br>support</p>
+  
+  <!--These are for temporary use until add product button is added?-->
+  <% if logged_in? %>
+    <li style="font-size:20px"><%= link_to "profile", current_customer %></li>
+    <li style="font-size:20px"><%= link_to "edit profile", edit_customer_path(current_customer) %></li>
+    <li style="font-size:20px"><%= link_to "log out", logout_path, method: :delete %></li>
+  <% else %>
+    <li style="font-size:20px"><%= link_to "log in", login_path %></li>
+  <% end %>
+
+</nav>
+
+<div class="head-text">
+  <span style="font-size:30px;"><%= yield(:title) %></span>
+</div>
+
+<div id="top-navigation" style="display: flex; justify-content: space-around;">
+  <h style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776; </h>
+  <p></p>
+  <p></p>
+  <a href="/carts"><h style="font-size:20px; text-align:right">Shopping Cart</h></a>
+</div>
+
+<hr class= ".grad">
+
+</section>

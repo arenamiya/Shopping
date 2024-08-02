@@ -1,0 +1,58 @@
+<%= form_with(model: cart, local: true) do |form| %>
+  <% if cart.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cart.errors.count, "error") %> prohibited this cart from being saved:</h2>
+
+      <ul>
+      <% cart.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <% if logged_in? %>
+      <%= form.hidden_field :user, id: :cart_user, value: current_customer.email %>  
+    <% else %>
+      <%= form.hidden_field :user, id: :cart_user, value: "" %>  
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+      <% if @sizes.present? && @sizes.length > 0 %>
+        <%= form.select :size, @sizes.map{|size| [size, size]}, id: :cart_size %> 
+      <% else %>
+        <%= form.select :size, ["S", "M", "L"], id: :cart_size %>
+      <% end %> 
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <% if @colors.present? && @colors.length > 0 %>
+        <%= form.select :color, @colors.map{|color| [color, color]}, id: :cart_color %> 
+    <% else %>
+        <%= form.select :color, ["Default"], id: :cart_size %>
+    <% end %> 
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.select :quantity, (1..30).to_a, id: :cart_quantity %>
+  </div>
+
+  <div class="field">
+    <% if @collection.present? %>
+        <%= form.hidden_field :product_id, id: :cart_product_id, value: @collection.id %>  
+    <% else %>
+        <%= form.hidden_field :product_id, id: :cart_product_id, value: @cart.product_id %> 
+    <% end %> 
+  </div>  
+
+  <div class="actions">
+    <%= form.submit "Add to Shopping Cart", class: "btn btn-grad" %>
+  </div>
+
+  <img src="" height="10%">
+<% end %>

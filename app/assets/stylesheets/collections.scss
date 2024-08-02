@@ -1,0 +1,39 @@
+#filter-divination {
+  font-size: 18px;
+  width: 70%;
+  margin: auto;
+}
+
+.image-button{
+  border:none;
+  display:inline-block;
+  padding: 0px 15px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:#fff;
+  background-color:#111;
+  height: 100px;
+  text-align:center;
+  font-size: 30px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.display-left{ 
+  position: absolute;
+  left: 0%;
+}
+
+.display-right {
+  position: absolute;
+  right: 0%;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+/*# sourceMappingURL=collections.css.map */

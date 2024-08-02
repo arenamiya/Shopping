@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'filter' %>
+
+<% content_for :title, @title %>
+
+<div class="fashion-grid">
+
+<% @collections.each do |collection| %>
+
+  <div class="fashion-item" id="fashion-item-<%= collection.id %>">
+    <a href="/collections/<%= collection.id %>">
+    <img src="<%= collection.photo %>" height="250px"><br>
+    <div class="fashion-name"><%= collection.name %></div>
+    </a>
+    $<%= collection.price %><br>
+    <a onClick="savedList(<%= collection.id %>)">Save Item</a>
+  </div>
+
+<% end %>
+
+</div>

@@ -1,0 +1,23 @@
+<% content_for :title, @collection.name %>
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="display-product-images fashion-item">
+  <img class="product-image" src="<%= @collection.photo %>" style="display:block;margin:auto;" width="50%">
+  <% @images.each do |image| %>
+    <img class="product-image" src="<%= image.image %>" style="display:none;margin:auto;" width="50%">
+  <% end %>
+</div>
+  <button class="image-button display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="image-button display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+    <div class="fashion-item">
+    <div class="fashion-name"><h2><%= @collection.name %></h2></div>
+    <div class="fashion-name"><%= @collection.details %></div><br>
+    $<%= @collection.price %><br>
+    </div>
+<%= render 'carts/form', cart: @cart %>
+
+ <%= link_to 'Edit', edit_collection_path(@collection) %> |
+<%= link_to 'Back', collections_path %>  

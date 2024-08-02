@@ -1,0 +1,29 @@
+<% provide(:title, 'Sign up') %>
+
+<html>
+    <head>
+        <style>
+            p {text-align: center;}
+        </style>
+    </head>
+<body>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@customer, url: signup_path) do |f| %>
+            <%= render 'shared/error_messages' %>
+            
+            <%= f.text_field :username, class: 'form-control', placeholder: "Username"%>
+            
+            <%= f.password_field :password, class: 'form-control', placeholder: "Password" %>
+            
+            <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Re-enter Password" %>
+            
+            <%= f.email_field :email, class: 'form-control', placeholder: "Email"%>
+            
+            <%= f.submit "Sign Up", class: "btn btn-grad" %>
+            
+        <% end %>
+        <p><%= link_to "Already a user?", login_path %></p>
+    </div>
+</div>
